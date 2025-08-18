@@ -10,7 +10,7 @@ function CategorySelector({ onSelect }) {
     }, []);
 
     return (
-        <div className="col-lg-5">
+        <div className="col-lg-8">
             <select className="form-select" onChange={(e) => onSelect(e.target.value)}>
                 <option value="">Seleccione una categoria</option>
                 {categories.map(cat => (
@@ -24,7 +24,7 @@ function CategorySelector({ onSelect }) {
 
 function DifficultySelector({ onSelect }) {
     return (
-        <div className="col-lg-3">
+        <div className="col-lg-4">
             <select className="form-select" onChange={(e) => onSelect(e.target.value)}>
                 <option value="">Elige dificultad</option>
                 <option value="easy">Fácil</option>
