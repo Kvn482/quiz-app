@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-function QuestionCard({ reset, correct, options, question, incrementScore }) {
+function QuestionCard({ reset, correct, options, question, incrementScore, onAnswered }) {
     const [selectedOption, setSelectedOption] = useState(null)
     const [showAnswer, setShowAnswer] = useState(false)
 
@@ -12,9 +12,9 @@ function QuestionCard({ reset, correct, options, question, incrementScore }) {
     const handleClick = (option) => {
         setSelectedOption(option)
         setShowAnswer(true)
+        onAnswered()
 
         if (option === correct) {
-            console.log("GANASTE")
             incrementScore()
         }
     }
